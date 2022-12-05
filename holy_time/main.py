@@ -1,9 +1,10 @@
 from datetime import datetime
 
-from .constants import FORMAT_REGEX, MONTH_NAMES, RELATIVE_MAP, TimeUnits
+from holy_time import constants
+
 
 class HolyTime:
-    Units = TimeUnits
+    Units = constants.TimeUnits
 
     def __init__(self, initial_date: datetime = datetime.now(), utc=False):
         self.date = HolyTime.resolve_date(initial_date)
